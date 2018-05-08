@@ -12,6 +12,16 @@
     color: white;
 }
 
+#titleRow {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#titleRow img {
+    border-radius: 100px;
+}
+
 h1 {
     font-family: 'IBM Plex Sans', serif;
     text-align: center;
