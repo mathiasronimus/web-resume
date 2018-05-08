@@ -18,8 +18,20 @@
     align-items: center;
 }
 
-#titleRow img {
+header img {
     border-radius: 100px;
+    position: absolute;
+    left: 50px;
+}
+
+#contactList {
+    display: flex;
+    justify-content: center;
+}
+
+#contactList span {
+    vertical-align: middle;
+    padding: 0px 5px;
 }
 
 h1 {
