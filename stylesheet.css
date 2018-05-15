@@ -8,7 +8,7 @@
 }
 
 .colour {
-    background-color: #1976D2;
+    background-color: #000;
     color: white;
 }
 
@@ -32,6 +32,25 @@ header img {
 #contactList span {
     vertical-align: middle;
     padding: 0px 5px;
+}
+
+table {
+    margin-top: 10px;
+    width: 100%;
+}
+
+.tableHead th {
+    font-weight: 600;
+}
+
+table, th {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;
+    font-weight: 400;
+}
+
+th {
+    padding: 5px;
 }
 
 h1 {
