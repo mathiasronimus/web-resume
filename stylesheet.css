@@ -7,9 +7,23 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+body {
+    width: 740px;
+    margin: auto;
+    position: relative;
+}
+
 .colour {
     background-color: #000;
     color: white;
+}
+
+.divider {
+    width: 25px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.75);
+    margin: auto;
 }
 
 #titleRow {
@@ -36,7 +50,9 @@ header img {
 
 table {
     margin-top: 10px;
+    margin-bottom: 10px;
     width: 100%;
+    table-layout: fixed;
 }
 
 .tableHead th {
@@ -82,6 +98,8 @@ section {
 
 .topic {
     font-weight: 600;
+    padding: 10px 0px;
+    font-size: 16px;
 }
 
 .detail {
@@ -102,4 +120,10 @@ section {
     display: inline-block;
     vertical-align: middle;
     padding: 0px 5px;
+}
+
+@media print {
+    .endOfPage {
+        page-break-after: always;
+    }
 }
