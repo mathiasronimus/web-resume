@@ -50,9 +50,7 @@ header img {
 
 table {
     margin-top: 10px;
-    margin-bottom: 10px;
     width: 100%;
-    table-layout: fixed;
 }
 
 .tableHead th {
@@ -122,8 +120,23 @@ section {
     padding: 0px 5px;
 }
 
+@media screen {
+    .printOnly {
+        display: none;
+    }
+
+    table {
+        table-layout: fixed;
+        margin-bottom: 10px;
+    }
+}
+
 @media print {
-    .endOfPage {
-        page-break-after: always;
+    .startOfPage {
+        page-break-before: always;
+    }
+
+    .screenOnly {
+        display: none;
     }
 }
