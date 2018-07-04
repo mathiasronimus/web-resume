@@ -121,7 +121,7 @@ th {
 }
 
 .reference {
-    width: 160px;
+    width: 275px;
 }
 
 #reference-container span {
@@ -156,6 +156,14 @@ th {
 @media (max-width: 700px) {
     header img {
         display: none;
+    }
+
+    #reference-container {
+        display: block;
+    }
+
+    .reference {
+        padding: 20px;
     }
 }
 
