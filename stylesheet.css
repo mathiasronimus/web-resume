@@ -12,7 +12,7 @@
 }
 
 body {
-    width: 740px;
+    max-width: 740px;
     margin: auto;
     position: relative;
 }
@@ -74,6 +74,7 @@ header img {
 #contactList {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 #contactList span {
@@ -149,5 +150,28 @@ th {
 
     .screenOnly {
         display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    header img {
+        display: none;
+    }
+}
+
+@media (max-width: 550px) {
+    #tableWrapper {
+        width: 99%;
+        overflow-x: scroll;
+    }
+
+    table {
+        width: 550px;
+    }
+}
+
+@media (max-width: 310px) {
+    header h1 {
+        font-size: 26px;
     }
 }
