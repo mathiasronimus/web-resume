@@ -1,5 +1,9 @@
+/*Fonts*/
+
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Serif:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
 @import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i');
+
+/*General Layout & Style*/
 
 * {
     margin: 0px;
@@ -13,11 +17,6 @@ body {
     position: relative;
 }
 
-.colour {
-    background-color: #000;
-    color: white;
-}
-
 .divider {
     width: 25px;
     height: 8px;
@@ -25,6 +24,40 @@ body {
     background-color: rgba(0, 0, 0, 0.75);
     margin: auto;
 }
+
+h1 {
+    font-family: 'IBM Plex Sans', serif;
+    text-align: center;
+    padding: 10px;
+    opacity: 0.95;
+}
+
+h2 {
+    text-align: center;
+    font-weight: 400;
+    opacity: 0.87;
+    font-size: 18px;
+}
+
+p {
+    opacity: 0.87;
+}
+
+section {
+    padding: 20px 20px;
+}
+
+.topic {
+    font-weight: 600;
+    padding: 10px 0px;
+    font-size: 16px;
+}
+
+.detail {
+    margin-bottom: 5px;
+}
+
+/*Header*/
 
 #titleRow {
     display: flex;
@@ -48,6 +81,17 @@ header img {
     padding: 0px 5px;
 }
 
+.colour {
+    background-color: #000;
+    color: white;
+}
+
+header h1 {
+    font-size: 30px;
+}
+
+/*Skills Table*/
+
 table {
     margin-top: 10px;
     width: 100%;
@@ -67,42 +111,7 @@ th {
     padding: 5px;
 }
 
-h1 {
-    font-family: 'IBM Plex Sans', serif;
-    text-align: center;
-    padding: 10px;
-    opacity: 0.95;
-}
-
-p {
-    opacity: 0.87;
-}
-
-header h1 {
-    font-size: 30px;
-}
-
-h2 {
-    text-align: center;
-    font-weight: 400;
-    opacity: 0.87;
-    font-size: 18px;
-}
-
-/*Each section, eg Skills*/
-section {
-    padding: 20px 20px;
-}
-
-.topic {
-    font-weight: 600;
-    padding: 10px 0px;
-    font-size: 16px;
-}
-
-.detail {
-    margin-bottom: 5px;
-}
+/*References*/
 
 #reference-container {
     display: flex;
@@ -119,6 +128,8 @@ section {
     vertical-align: middle;
     padding: 0px 5px;
 }
+
+/*Media Queries - Different styles for print and screen*/
 
 @media screen {
     .printOnly {
