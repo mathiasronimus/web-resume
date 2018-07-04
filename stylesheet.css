@@ -178,8 +178,20 @@ th {
     }
 }
 
-@media (max-width: 310px) {
+@media (max-width: 340px) {
     header h1 {
         font-size: 26px;
+    }
+
+    section {
+        padding: 20px 10px;
+    }
+
+    #referenceContainer {
+        padding: 20px 0px;
+    }
+
+    .reference {
+        width: auto;
     }
 }
