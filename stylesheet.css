@@ -59,7 +59,8 @@ section {
 
 /*Header*/
 
-#titleRow {
+header {
+    padding: 20px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -138,7 +139,7 @@ th {
 
 @media (max-width: 700px) {
     header img {
-        display: none;
+        position: initial;
     }
 
     #reference-container {
@@ -151,6 +152,15 @@ th {
 }
 
 @media (max-width: 550px) {
+
+    header {
+        flex-direction: column;
+    }
+
+    header img {
+        margin-bottom: 10px;
+    }
+
     #tableWrapper {
         width: 99%;
         overflow-x: scroll;
@@ -205,6 +215,7 @@ th {
 
     header img {
         display: block;
+        position: absolute;
     }
 
     table {
