@@ -136,31 +136,6 @@ th {
 
 /*Media Queries - Different styles for print and screen*/
 
-@media screen {
-    .printOnly {
-        display: none;
-    }
-
-    table {
-        table-layout: fixed;
-        margin-bottom: 10px;
-    }
-}
-
-@media print {
-    .startOfPage {
-        page-break-before: always;
-    }
-
-    .screenOnly {
-        display: none;
-    }
-
-    #contactList a {
-        text-decoration: none;
-    }
-}
-
 @media (max-width: 700px) {
     header img {
         display: none;
@@ -201,5 +176,47 @@ th {
 
     .reference {
         width: auto;
+    }
+}
+
+@media screen {
+    .printOnly {
+        display: none;
+    }
+
+    table {
+        table-layout: fixed;
+        margin-bottom: 10px;
+    }
+}
+
+@media print {
+    .startOfPage {
+        page-break-before: always;
+    }
+
+    .screenOnly {
+        display: none;
+    }
+
+    #contactList a {
+        text-decoration: none;
+    }
+
+    header img {
+        display: block;
+    }
+
+    table {
+        width: auto;
+    }
+
+    .reference a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #reference-container {
+        display: flex;
     }
 }
