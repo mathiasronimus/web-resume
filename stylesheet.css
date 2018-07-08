@@ -11,17 +11,21 @@
     font-family: 'IBM Plex Sans', sans-serif;
 }
 
+html {
+    background-color: #fefefe;
+}
+
 body {
     max-width: 740px;
     margin: auto;
     position: relative;
+    padding-bottom: 20px;
+    background-color: #fefeff;
 }
 
 .divider {
-    width: 25px;
-    height: 8px;
-    border-radius: 10px;
-    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 1px;
     margin: auto;
 }
 
@@ -44,7 +48,7 @@ p {
 }
 
 section {
-    padding: 20px 20px;
+    padding: 20px 20px 0px 20px;
 }
 
 .topic {
@@ -88,7 +92,7 @@ header img {
 }
 
 .colour {
-    background-color: #000;
+    background-color: #01579B;
     color: white;
 }
 
@@ -218,8 +222,13 @@ th {
         position: absolute;
     }
 
+    #tableWrapper {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
     table {
-        width: auto;
+        width: 100%;
     }
 
     .reference a {
