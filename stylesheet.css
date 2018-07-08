@@ -82,6 +82,10 @@ header img {
     padding: 0px 5px;
 }
 
+#contactList a {
+    color: white;
+}
+
 .colour {
     background-color: #000;
     color: white;
@@ -150,6 +154,10 @@ th {
 
     .screenOnly {
         display: none;
+    }
+
+    #contactList a {
+        text-decoration: none;
     }
 }
 
