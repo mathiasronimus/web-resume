@@ -23,12 +23,6 @@ body {
     background-color: #fefeff;
 }
 
-.divider {
-    width: 100%;
-    height: 1px;
-    margin: auto;
-}
-
 h1 {
     font-family: 'IBM Plex Sans', serif;
     text-align: center;
@@ -55,6 +49,12 @@ section {
     font-weight: 600;
     padding: 10px 0px;
     font-size: 16px;
+}
+
+.subTopic {
+    display: inline;
+    font-weight: 400;
+    opacity: 0.65;
 }
 
 .detail {
