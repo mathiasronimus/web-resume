@@ -1,8 +1,8 @@
-/*Fonts*/
+/*===============Fonts===============*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
 
-/*General Layout & Style*/
+/*===============General Layout & Style===============*/
 
 * {
     margin: 0px;
@@ -19,20 +19,12 @@ body {
     margin: auto;
     position: relative;
     padding-bottom: 20px;
-    background-color: #fefeff;
 }
 
 h1 {
     text-align: center;
     padding: 10px;
     opacity: 0.95;
-}
-
-h2 {
-    text-align: center;
-    font-weight: 400;
-    opacity: 0.87;
-    font-size: 18px;
 }
 
 p {
@@ -60,7 +52,14 @@ section {
     margin-bottom: 5px;
 }
 
-/*Header*/
+/*Compact layout for small screens*/
+@media (max-width: 340px) {
+    section {
+        padding: 20px 10px;
+    }
+}
+
+/*===============Header===============*/
 
 header {
     padding: 20px;
@@ -100,7 +99,41 @@ header h1 {
     font-size: 30px;
 }
 
-/*Skills Table*/
+/*Display picture in flex layout
+  with other header content for
+  medium width screens.*/
+@media (max-width: 700px) {
+    header img {
+        position: initial;
+    }
+}
+
+/*Display header content vertically
+  on smaller screens.*/
+@media (max-width: 550px) {
+    header {
+        flex-direction: column;
+    }
+    
+    header img {
+        margin-bottom: 10px;
+    }
+}
+
+/*Remove email link styling for print.
+  Display image in large-screen position.*/
+@media print {
+    #contactList a {
+        text-decoration: none;
+    }
+
+    header img {
+        display: block;
+        position: absolute;
+    }
+}
+
+/*===============Skills Table===============*/
 
 table {
     margin-top: 10px;
@@ -121,16 +154,47 @@ th {
     padding: 5px;
 }
 
-/*References*/
+/*Make table scroll horizontally on
+  smaller screens.*/
+@media (max-width: 550px) {
+    #tableWrapper {
+        width: 99%;
+        overflow-x: scroll;
+    }
+    
+    table {
+        width: 550px;
+    }
+}
+
+/*Fix table layout on screens, add
+  extra bottom space.*/
+@media screen {
+    table {
+        table-layout: fixed;
+        margin-bottom: 10px;
+    }
+}
+
+/*Always display edge-to-edge table
+  for print.*/
+@media print {
+    #tableWrapper {
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    table {
+        width: 100%;
+    }
+}
+
+/*===============References===============*/
 
 #reference-container {
     display: flex;
     justify-content: space-around;
     padding-top: 15px;
-}
-
-.reference {
-    width: 280px;
 }
 
 #reference-container span {
@@ -139,13 +203,13 @@ th {
     padding: 0px 5px;
 }
 
-/*Media Queries - Different styles for print and screen*/
+.reference {
+    width: 280px;
+}
 
+/*Display references vertically 
+  on medium screens*/
 @media (max-width: 700px) {
-    header img {
-        position: initial;
-    }
-
     #reference-container {
         display: block;
     }
@@ -155,52 +219,36 @@ th {
     }
 }
 
-@media (max-width: 550px) {
-
-    header {
-        flex-direction: column;
-    }
-
-    header img {
-        margin-bottom: 10px;
-    }
-
-    #tableWrapper {
-        width: 99%;
-        overflow-x: scroll;
-    }
-
-    table {
-        width: 550px;
-    }
-}
-
+/*Compact references for small
+  screens*/
 @media (max-width: 340px) {
-    header h1 {
-        font-size: 26px;
-    }
-
-    section {
-        padding: 20px 10px;
-    }
-
     #referenceContainer {
         padding: 20px 0px;
     }
-
+    
     .reference {
         width: auto;
     }
 }
 
+/*Remove link styling for emails on references,
+  always use large-screen layout for print.*/
+@media print {
+    .reference a {
+        text-decoration: none;
+        color: black;
+    }
+
+    #reference-container {
+        display: flex;
+    }
+}
+
+/*Media Queries - Different styles for print and screen*/
+
 @media screen {
     .printOnly {
         display: none;
-    }
-
-    table {
-        table-layout: fixed;
-        margin-bottom: 10px;
     }
 }
 
@@ -211,32 +259,5 @@ th {
 
     .screenOnly {
         display: none;
-    }
-
-    #contactList a {
-        text-decoration: none;
-    }
-
-    header img {
-        display: block;
-        position: absolute;
-    }
-
-    #tableWrapper {
-        overflow-x: hidden;
-        width: 100%;
-    }
-
-    table {
-        width: 100%;
-    }
-
-    .reference a {
-        text-decoration: none;
-        color: black;
-    }
-
-    #reference-container {
-        display: flex;
     }
 }
