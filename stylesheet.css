@@ -62,7 +62,7 @@ section {
 /*===============Header===============*/
 
 header {
-    padding: 20px;
+    padding: 12px;
     display: flex;
     justify-content: space-around;
     align-items: center;
