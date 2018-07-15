@@ -1,6 +1,7 @@
 /*===============Fonts===============*/
 
 @import url('https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900');
 
 /*===============General Layout & Style===============*/
 
@@ -19,6 +20,7 @@ body {
     margin: auto;
     position: relative;
     padding-bottom: 20px;
+    margin-top: 20px;
 }
 
 h1 {
@@ -59,6 +61,19 @@ section {
     }
 }
 
+@media print {
+
+    /*Top padding already in print*/
+    body {
+        margin-top: 0px;
+    }
+
+    section a {
+        color: rgba(0, 0, 0, 0.87);
+        text-decoration: none;
+    }
+}
+
 /*===============Header===============*/
 
 header {
@@ -87,16 +102,26 @@ header img {
 }
 
 #contactList a {
-    color: white;
+    color: rgba(0, 0, 0, 0.87);
 }
 
 .colour {
-    background-color: rgba(0, 0, 0, 0.9);
-    color: white;
+    border-radius: 6px;
+    background-color: rgba(0, 0, 0, 0.065);
+    color: rgba(0, 0, 0, 0.87);
+    border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-size: 30px;
+}
+
+/*Remove curved edges once header
+  is edge-to-edge*/
+@media (max-width: 740px) {
+    .colour {
+        border-radius: 0px;
+    }
 }
 
 /*Display picture in flex layout
@@ -130,6 +155,10 @@ header h1 {
     header img {
         display: block;
         position: absolute;
+    }
+
+    .colour {
+        border-radius: 6px;
     }
 }
 
