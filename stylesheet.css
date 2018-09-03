@@ -179,7 +179,7 @@ header h1 {
 /*===============Skills Table===============*/
 
 table {
-    margin-top: 10px;
+    margin-top: 5px;
     width: 100%;
 }
 
@@ -194,7 +194,7 @@ table, th {
 }
 
 th {
-    padding: 5px;
+    padding: 4px;
 }
 
 /*Make table scroll horizontally on
